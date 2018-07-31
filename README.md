@@ -68,11 +68,8 @@ allprojects {
 在你app的gradle里面添加：
 </br></br>
 
-allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
+dependencies {
+	        implementation 'com.github.YMLopez:Toast:1.0.0'
 	}
 
 </br></br>
