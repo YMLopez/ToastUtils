@@ -4,7 +4,7 @@
 
 ### **1.效果图预览**
 </br>
-![](https://github.com/YMLopez/TheTest/blob/master/0.jpg)
+!(https://github.com/YMLopez/TheTest/blob/master/0.jpg)
 ![](https://github.com/YMLopez/TheTest/blob/master/1.jpg)
 ![](https://github.com/YMLopez/TheTest/blob/master/2.jpg)
 </br>
