@@ -69,7 +69,7 @@ allprojects {
 </br></br>
 
 dependencies {
-	        implementation 'com.github.YMLopez:Toast:1.0.0'
+	        implementation 'com.github.YMLopez:Toast:1.0.1'
 	}
 
 </br></br>
@@ -77,7 +77,7 @@ dependencies {
 ----------
 
 
-好了，我知道我里面的代码写得不是很好(压根就不好好吧!)，不过现在项目忙就懒得改了，哈哈^_^。这个leanote的markdown真是...以后有空再改好看点吧...更多功能及使用请自己探索吧......
+好了，我知道我里面的代码写得不是很好(压根就不好好吧,看你的log都还留在里面!)，不过现在项目忙就懒得改了，有什么不好的地方请各位大佬指出请多指教，哈哈^_^。这个leanote的markdown真是...以后有空再改好看点吧...更多功能及使用请自己探索吧......
 
 
 
