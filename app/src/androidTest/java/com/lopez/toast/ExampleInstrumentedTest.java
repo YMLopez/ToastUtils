@@ -1,4 +1,4 @@
-package com.lopez.test.toast;
+package com.lopez.toast;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

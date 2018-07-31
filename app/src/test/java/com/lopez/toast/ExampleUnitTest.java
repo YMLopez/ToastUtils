@@ -1,4 +1,4 @@
-package com.lopez.test.toast;
+package com.lopez.toast;
 
 import org.junit.Test;
 
