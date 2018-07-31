@@ -4,11 +4,11 @@
 
 ### **1.效果图预览**
 </br>
-![效果1](<img src="https://github.com/YMLopez/TheTest/blob/master/0.jpg" width="50%" height="50%" />)
-
-![效果2](<img src="https://github.com/YMLopez/TheTest/blob/master/1.jpg" width="50%" height="50%" />)
-
-![效果3](<img src="https://github.com/YMLopez/TheTest/blob/master/2.jpg" width="50%" height="50%" />)
+![效果1](<img src="https://github.com/YMLopez/TheTest/blob/master/0.jpg" width="30%" height="50%" />)
+</br>
+![效果2](<img src="https://github.com/YMLopez/TheTest/blob/master/1.jpg" width="30%" height="50%" />)
+</br>
+![效果3](<img src="https://github.com/YMLopez/TheTest/blob/master/2.jpg" width="30%" height="50%" />)
 </br>
 </br>
 ----------
