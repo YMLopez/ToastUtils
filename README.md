@@ -3,13 +3,13 @@
 ----------
 
 ### **1.效果图预览**
-</br>
-![效果1]<img src="https://github.com/YMLopez/TheTest/blob/master/0.jpg" width="20%" height="40%" />
 
-![效果2]<img src="https://github.com/YMLopez/TheTest/blob/master/1.jpg" width="20%" height="40%" />
+<img src="https://github.com/YMLopez/TheTest/blob/master/0.jpg" width="20%" height="40%" />
 
-![效果3]<img src="https://github.com/YMLopez/TheTest/blob/master/2.jpg" width="20%" height="40%" />
-</br>
+<img src="https://github.com/YMLopez/TheTest/blob/master/1.jpg" width="20%" height="40%" />
+
+<img src="https://github.com/YMLopez/TheTest/blob/master/2.jpg" width="20%" height="40%" />
+
 ----------
 
 
