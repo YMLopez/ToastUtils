@@ -16,8 +16,6 @@ public class MainActivity extends AppCompatActivity {
 
         /*ToastUtils toast = ToastUtils.initToast(this);
         toast.setLayout(R.layout.toast_layout_white);*/
-
-        //ToastUtils.initToast(this).setLayout(R.layout.toast_layout_white);
     }
 
     public void hello(View view) {

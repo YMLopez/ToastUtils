@@ -15,7 +15,7 @@ public class ToastApplication extends Application {
     public void onCreate() {
         super.onCreate();
         //Log.d("==w", "准备初始化");
-        ToastUtils.initToast(this);
+        ToastUtils.initToast(this).setLayout(R.layout.toast_layout_white);
     }
 
 }

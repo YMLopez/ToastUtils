@@ -265,15 +265,6 @@ public class ToastUtils {
      */
     public static void showToastLong(String msg) {
         //不能直接填标识符，不然会失效(那些表示0、1)
-        if (instance == null) {
-            Log.d("==w", "showToastLong: 呵呵呵为什么会是空");
-            return;
-        }
-
-        if (instance.getHandler() == null) {
-            Log.d("==w", "showToastLong: 呵呵呵空了");
-            return;
-        }
         instance.getHandler().showMyToast(msg, 3500);
     }
 
