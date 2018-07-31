@@ -243,7 +243,7 @@ public class ToastUtils {
      *
      * @param msg 要显示的内容
      */
-    public static void showToastShort(String msg) {
+    public static void showToast(String msg) {
         //不能直接填SHORT、LONG这样的标识符
         mHandler.showMyToast(msg, 2000);
     }
@@ -274,7 +274,7 @@ public class ToastUtils {
      *
      * @param resId 要显示的内容id
      */
-    public static void showToastShort(int resId) {
+    public static void showToast(int resId) {
         //不能直接填SHORT、LONG这样的标识符
         mHandler.showMyToast(mHandler.getResourceString(resId), 2000);
     }
