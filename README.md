@@ -69,7 +69,7 @@ allprojects {
 </br></br>
 
 dependencies {
-	        implementation 'com.github.YMLopez:Toast:1.0.0'
+	        implementation 'com.github.YMLopez:Toast:1.0.1'
 	}
 
 </br></br>
