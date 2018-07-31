@@ -49,8 +49,33 @@
 > ToastUtils.showToast(R.string.hi, 1000);
 
 </br>
+
+----------
+
+### **4.如何使用**
+在你Project的gradle里面添加：
+</br></br>
+
+> allprojects {  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;repositories { 		 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;... 		 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maven { url 'https://jitpack.io' } 		 &nbsp; &nbsp; &nbsp;
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+}
+
 </br>
 </br>
+在你app的gradle里面添加：
+</br></br>
+
+> dependencies {
+> 	        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;implementation 'com.github.YMLopez:Toast:1.0.0' 
+}
+
+</br></br>
+
+----------
+
 
 好了，我知道我里面的代码写得不是很好，不过现在项目忙就懒得改了，哈哈，更多使用及功能请自己探索吧...
 
