@@ -78,7 +78,7 @@ allprojects {
 </br></br>
 
 dependencies {
-	        implementation 'com.github.YMLopez:ToastUtils:1.0.0'
+	        implementation 'com.github.YMLopez:ToastUtils:1.0.1'
 	}
 
 </br></br>
