@@ -77,9 +77,9 @@ allprojects {
 在你app的gradle里面添加：
 </br></br>
 
-dependencies {
-	        implementation 'com.github.YMLopez:ToastUtils:1.0.0'
-	}
+implementation('com.github.YMLopez:ToastUtils:1.0.2'){
+        exclude group: 'com.android.support'
+    }
 
 </br></br>
 
