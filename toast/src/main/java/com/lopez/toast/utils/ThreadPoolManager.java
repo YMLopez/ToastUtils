@@ -33,7 +33,7 @@ public class ThreadPoolManager {
         linkThreadPool = Executors.newSingleThreadExecutor();
     }
 
-    protected static void execute(Runnable runnable) {
+    public static void execute(Runnable runnable) {
         try {
             threadPool.execute(runnable);
         } catch (Exception e) {
@@ -41,7 +41,7 @@ public class ThreadPoolManager {
         }
     }
 
-    protected static void executeOnLinkThreadPool(Runnable runnable) {
+    private static void executeOnLinkThreadPool(Runnable runnable) {
         try {
             linkThreadPool.execute(runnable);
         } catch (Exception e) {
@@ -54,7 +54,7 @@ public class ThreadPoolManager {
      * 针对不同api的 asynctask处理
      * 3.0以后的asynctask被改为默认串行，使用自己的线程池实现并行
      */
-    protected static <Params, Progress, Result> void executeOnExecutor(AsyncTask<Params, Progress, Result> task, Params...
+    private static <Params, Progress, Result> void executeOnExecutor(AsyncTask<Params, Progress, Result> task, Params...
             params) {
         if (Build.VERSION.SDK_INT >= 11) {
             task.executeOnExecutor(threadPool, params);

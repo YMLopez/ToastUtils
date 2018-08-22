@@ -1,9 +1,6 @@
 package com.lopez.toast;
 
 import android.app.Application;
-import android.util.Log;
-
-import com.lopez.toast.utils.ToastUtils;
 
 
 /**
@@ -15,7 +12,8 @@ public class ToastApplication extends Application {
     public void onCreate() {
         super.onCreate();
         //Log.d("==w", "准备初始化");
-        ToastUtils.initToast(this).setLayout(R.layout.toast_layout_white);
+        ToastUtils toast = ToastUtils.initToast(this);
+        toast.setLayout(R.layout.toast_layout_white);
     }
 
 }

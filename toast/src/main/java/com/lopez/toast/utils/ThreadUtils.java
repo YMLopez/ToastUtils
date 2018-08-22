@@ -14,11 +14,11 @@ public class ThreadUtils {
     private static Handler sWorkHandler;
     private static Handler sMainHandler;
 
-    protected static void runInUIThread(Runnable runnable) {
+    public static void runInUIThread(Runnable runnable) {
         runInUIThread(runnable, true);
     }
 
-    protected static void runInUIThread(Runnable runnable, boolean forcepost) {
+    public static void runInUIThread(Runnable runnable, boolean forcepost) {
         if (runnable == null) {
             return;
         }
@@ -30,7 +30,7 @@ public class ThreadUtils {
         }
     }
 
-    protected static void runInUIThreadDelay(Runnable runnable, long delay) {
+    public static void runInUIThreadDelay(Runnable runnable, long delay) {
         if (runnable == null) {
             return;
         }
@@ -38,7 +38,7 @@ public class ThreadUtils {
         sMainHandler.postDelayed(runnable, delay);
     }
 
-    protected static void removeFromUIThread(Runnable runnable) {
+    public static void removeFromUIThread(Runnable runnable) {
         if (runnable == null) {
             return;
         }
@@ -46,17 +46,17 @@ public class ThreadUtils {
         sMainHandler.removeCallbacks(runnable);
     }
 
-    protected synchronized static void initMainHandler() {
+    public synchronized static void initMainHandler() {
         if (sMainHandler == null) {
             sMainHandler = new Handler(Looper.getMainLooper());
         }
     }
 
-    protected static void runInGlobalWorkThread(Runnable runnable) {
+    public static void runInGlobalWorkThread(Runnable runnable) {
         runInGlobalWorkThread(runnable, true);
     }
 
-    protected static void runInGlobalWorkThread(Runnable runnable, boolean forcepost) {
+    public static void runInGlobalWorkThread(Runnable runnable, boolean forcepost) {
         if (runnable == null) {
             return;
         }
@@ -68,7 +68,7 @@ public class ThreadUtils {
         }
     }
 
-    protected static void runInGlobalWorkThreadDelay(Runnable runnable, long delay) {
+    public static void runInGlobalWorkThreadDelay(Runnable runnable, long delay) {
         if (runnable == null) {
             return;
         }
@@ -76,7 +76,7 @@ public class ThreadUtils {
         sWorkHandler.postDelayed(runnable, delay);
     }
 
-    protected synchronized static void removeFromGlobalWorkThread(Runnable runnable) {
+    public synchronized static void removeFromGlobalWorkThread(Runnable runnable) {
         if (runnable == null) {
             return;
         }
@@ -84,7 +84,7 @@ public class ThreadUtils {
         sWorkHandler.removeCallbacks(runnable);
     }
 
-    private synchronized static void initWorkHandler() {
+    public synchronized static void initWorkHandler() {
         if (sWorkHandler == null) {
             sWorkThread = new HandlerThread("com.rekall.extramessage.util.ThreadUtils");
             sWorkThread.start();
