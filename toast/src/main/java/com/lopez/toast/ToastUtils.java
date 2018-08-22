@@ -25,9 +25,9 @@ import java.lang.ref.WeakReference;
 
 public class ToastUtils {
 
+    private MyHandler mHandler;
     private static Toast mToast;
     private static ToastUtils instance;
-    private MyHandler mHandler;
     private static WeakReference<Context> weakContext;
 
     public static ToastUtils initToast(Context context) {
@@ -38,9 +38,9 @@ public class ToastUtils {
     private static ToastUtils getInstance(Context context) {
         if (instance == null) {
             synchronized (ToastUtils.class) {
-                Log.d("==w", "instance为空 > 1 again");
+                //Log.d("==w", "instance为空 > 1 again");
                 if (instance == null) {
-                    Log.d("==w", "instance为空 > 2 实例化");
+                    //Log.d("==w", "instance为空 > 2 实例化");
                     instance = new ToastUtils(context);
                 }
             }
@@ -88,7 +88,7 @@ public class ToastUtils {
             switch (msg.what) {
                 case 0:
                     if (mToast != null) {
-                        Log.d("==w", "handleMessage: mToast不为空");
+                        //Log.d("==w", "handleMessage: mToast不为空");
                         toastShow();
 
                         ThreadPoolManager.execute(new Runnable() {
@@ -98,10 +98,10 @@ public class ToastUtils {
 
                                 if (count <= time) {
                                     SystemClock.sleep(100);
-                                    Log.d("==w", ">> handleMessage: count: " + count + "\t\tVS\t\ttime: " + time);
+                                    //Log.d("==w", ">> handleMessage: count: " + count + "\t\tVS\t\ttime: " + time);
                                     getInstance(weakContext.get()).getHandler().sendEmptyMessage(0);
                                 } else {
-                                    Log.d("==w", "handleMessage: 结束了。。。");
+                                    //Log.d("==w", "handleMessage: 结束了。。。");
                                     //重置
                                     count = 0;
                                     if (mToast != null) {
@@ -110,8 +110,8 @@ public class ToastUtils {
                                     }
                                 }
 
-                                String threadName = Thread.currentThread().getName();
-                                Log.d("==w", "run: 当前线程名: " + threadName + "\n");
+                                //String threadName = Thread.currentThread().getName();
+                                //Log.d("==w", "run: 当前线程名: " + threadName + "\n");
                             }
                         });
                     }
@@ -150,7 +150,7 @@ public class ToastUtils {
                 View mToastView = mToast.getView();
                 TextView mtv = (TextView) mToastView.findViewById(R.id.toast_message);
                 if (!mtv.getText().equals(msg)) {
-                    Log.d("==w", "showMyToast: 与之前的值不相等: " + mtv.getText());
+                    //Log.d("==w", "showMyToast: 与之前的值不相等: " + mtv.getText());
                     //不相等就表示可以更新Toast了
                     mtv.setText(msg);
                 }
@@ -182,7 +182,7 @@ public class ToastUtils {
                         public void run() {
                             //表示0.1秒跑一次
                             SystemClock.sleep(100);
-                            Log.d("==w", "run: 发送 0 !!");
+                            //Log.d("==w", "run: 发送 0 !!");
                             getInstance(weakContext.get()).getHandler().sendEmptyMessage(0);
                         }
                     });
@@ -209,11 +209,11 @@ public class ToastUtils {
     //主线、子线程中的封装Toast
     private static void toastShow() {
         if (isInMainThread) {
-            Log.d("==w", "主线程 --- Toast");
+            //Log.d("==w", "主线程 --- Toast");
             mToast.show();
         } else {
             try {
-                Log.d("==w", "如果处在子线程，那么需要换到主线程中再Toast");
+                //Log.d("==w", "如果处在子线程，那么需要换到主线程中再Toast");
                 ThreadUtils.runInUIThread(new Runnable() {
                     @Override
                     public void run() {
@@ -221,7 +221,7 @@ public class ToastUtils {
                     }
                 });
             } catch (Exception e) {
-                Log.d("==w", "Toast错误...");
+                //Log.d("==w", "Toast错误...");
                 e.printStackTrace();
             }
         }
@@ -275,7 +275,7 @@ public class ToastUtils {
      */
     public static void showToastLong(String msg) {
         //不能直接填标识符，不然会失效(那些表示0、1)
-        Log.d("==w", "toast: " + msg);
+        //Log.d("==w", "toast: " + msg);
         getInstance(weakContext.get()).getHandler().showMyToast(msg, 3500);
     }
 
